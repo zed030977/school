@@ -11,21 +11,19 @@ int main()
 	
 	do
 	{
-		printf("Á¤¼ö ÇÏ³ª¸¦ ÀÔ·Â ÇÏ½Ã¿À: ");
+		printf("ì •ìˆ˜ í•˜ë‚˜ë¥¼ ìž…ë ¥ í•˜ì‹œì˜¤: ");
 		scanf("%d", &value);
 	}while(value <= 0);
 	
 	do
 	{
-		printf("\nº¯È¯ÇÒ Áø¸¦ ±¸ÇÏ½Ã¿À.(36Áø¼ö ±îÁö¸¸ °¡´É): ");
+		printf("\në³€í™˜í•  ì§„ë¥¼ êµ¬í•˜ì‹œì˜¤.(36ì§„ìˆ˜ ê¹Œì§€ë§Œ ê°€ëŠ¥): ");
 		scanf("%d", &essence);
 	}while(essence >= 37);
 	
 	
 	ess_con(value, essence);
 	
-	
-	//printf("º¯È¯µÈ Áø¼ö´Â %d ÀÔ´Ï´Ù.", num);
 	 
 	return 0;
 }
