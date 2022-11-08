@@ -5,7 +5,7 @@ int line_search(int a[], int n, int ky);
 
 int main(void)
 {
-	int index, key, i, n, num;
+	int index, key, i, n;
 	int *x;
 	
 	puts("선형 검색 (보초법)");
@@ -22,7 +22,7 @@ int main(void)
 	printf("검색값: ");
 	scanf("%d", &key);
 	
-	index = line_search(x, num, key);
+	index = line_search(x, n, key);
 	if(index == -1)
 		printf("검색에 실패했습니다.");
 	else
