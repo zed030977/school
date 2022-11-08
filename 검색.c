@@ -3,35 +3,47 @@
 
 int line_search(int a[], int n, int ky);
 
-int main()
+int main(void)
 {
 	int index, key, i, n, num;
-	int x;
+	int *x;
 	
-	printf("¼±Çü °Ë»ö (º¸ÃÊ¹ý)"\n);
-	printf("¿ä¼Ò °³¼ö: ");
+	puts("ì„ í˜• ê²€ìƒ‰ (ë³´ì´ˆë²•)");
+	printf("ìš”ì†Œ ê°œìˆ˜: ");
 	
-	scanf("%d" &n);
+	scanf("%d", &n);
 	
-	x = calloc(n, sizeof(int));
-	for(i = 0; i <= n; i++)
+	x = calloc(n + 1, sizeof(int));
+	for(i = 0; i < n; i++)
 	{
 		printf("x[%d]: ", i);
 		scanf("%d", &x[i]);
 	}
-	printf("°Ë»ö°ª: ");
+	printf("ê²€ìƒ‰ê°’: ");
 	scanf("%d", &key);
 	
 	index = line_search(x, num, key);
+	if(index == -1)
+		printf("ê²€ìƒ‰ì— ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.");
+	else
+		printf("%dì€(ëŠ”) x[%d]ì— ìžˆìŠµë‹ˆë‹¤.\n", key, index);
+	free(x);
 	
+	return 0; 
 	
 }
 
 int line_search(int a[], int n, int ky)
 {
 	int i = 0;
-	
+	a[n] = ky;
+	while(1) {
+		if(a[i] == ky)
+		{
+			break;
+		}
+		i++;
+	}
+	return i == n ? -1 : i;
 	
 }
-
-
